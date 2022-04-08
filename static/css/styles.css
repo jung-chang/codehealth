@@ -1,0 +1,14 @@
+body {
+  font-family: "Inter", sans-serif;
+  color: #333333;
+  font-size: 16px;
+}
+
+div#content {
+  max-width: 720px;
+  margin: auto;
+}
+
+code {
+  line-height: 1.4;
+}

@@ -2,3 +2,13 @@ baseURL = "/"
 languageCode = "en-us"
 title = "CodeHealth"
 theme = "custom"
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+[markup.highlight]
+      codeFences = true
+      guessSyntax = true
+      tabWidth = 4
+      noClasses = false
+      style = "github-light"
