@@ -1,7 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "CodeHealth"
-theme = "custom"
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
@@ -12,3 +11,6 @@ pygmentsCodefences = true
       tabWidth = 4
       noClasses = false
       style = "github-light"
+
+[markup.goldmark.renderer]
+unsafe= true

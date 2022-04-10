@@ -1,8 +1,0 @@
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-<br><br>
-{{ .Content }}
-
-{{with .Next}}{{.Permalink}}{{end}}
-{{with .Prev}}{{.Permalink}}{{end}}
-{{ end }}

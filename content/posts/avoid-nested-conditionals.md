@@ -7,7 +7,7 @@ draft: true
 
 Let’s take a look at this example code block for error checking a response from a network request. Can we easily determine which errors are returned for which conditional?
 
-{{< green-code-block >}}
+{{< red-code >}}
 {{< highlight javascript >}}
 
 const response = await fetch('www.example.com');
@@ -27,13 +27,13 @@ if (response.status === HTTP_200_OK) {
 }
 
 {{< /highlight >}}
-{{< /green-code-block >}}
+{{< /red-code >}}
 
 It’s not obvious which errors are a result of which if statement due to the complexities introduced by nested conditionals.
 
 How can we improve this? We can flatten the nested conditionals by decoupling the if statements like the following:
 
-{{< red-code-block >}}
+{{< green-code >}}
 {{< highlight javascript >}}
 
 const response = await fetch("www.example.com");
@@ -50,9 +50,11 @@ if (!data.success) {
 return data;
 
 {{< /highlight >}}
-{{< /red-code-block >}}
+{{< /green-code >}}
 
 By refactoring the conditional statements we are able to improve readability and clarify which errors are returned for each specific condition. This coding pattern uses guard clauses as an effective way to guard against invalid conditions to avoid errors.
+
+{{% tldr %}}
 
 General rules to reduce complexity for nested conditionals
 
@@ -60,9 +62,11 @@ General rules to reduce complexity for nested conditionals
 2. Guard clauses are an effective way to flatten nested logic.
 3. Decouple nested logic into separate functions if it’s not easily understandable.
 
+{{% /tldr %}}
+
 Always think about simplifying code whenever possible to improve readability and maintainability!
 
-# Additional Resources
+## Additional Resources
 
 Here are some additional resources to help the understanding of reducing complexity by avoiding nested conditionals:
 
@@ -70,6 +74,6 @@ Here are some additional resources to help the understanding of reducing complex
 - Khan Academy: What are nested conditionals
 - Wikipedia: Guard clauses (computer science)
 
-# Special Thanks
+## Special Thanks
 
 Special thanks to @kevinchang, @jungchang, and @bettycakez for contributing and advising content for this issue.
