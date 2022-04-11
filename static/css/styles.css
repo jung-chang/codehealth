@@ -1,6 +1,7 @@
 @import "single.css";
 @import "header.css";
 @import "footer.css";
+@import "join.css";
 
 body {
   font-family: "Inter", sans-serif;
@@ -22,6 +23,7 @@ h1 {
 
 div#content {
   max-width: 720px;
+  min-width: 400px;
   margin: auto;
   padding: 0 15px;
 }

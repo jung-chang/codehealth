@@ -52,28 +52,31 @@ return data;
 {{< /highlight >}}
 {{< /green-code >}}
 
-By refactoring the conditional statements we are able to improve readability and clarify which errors are returned for each specific condition. This coding pattern uses guard clauses as an effective way to guard against invalid conditions to avoid errors.
+By refactoring the conditional statements we are able to **improve readability** and clarify which errors are returned for each specific condition. This coding pattern uses **guard clauses** as an effective way to guard against invalid conditions to avoid errors.
 
 {{% tldr %}}
 
-General rules to reduce complexity for nested conditionals
+General rules to reduce complexity for nested conditionals:
 
-1. Avoid nesting beyond two levels. This will greatly improve the readability of the code.
-2. Guard clauses are an effective way to flatten nested logic.
+1. Avoid nesting beyond two levels; this will greatly improve code readability.
+2. Use guard clauses to effectively flatten nested logic.
 3. Decouple nested logic into separate functions if it’s not easily understandable.
 
 {{% /tldr %}}
 
 Always think about simplifying code whenever possible to improve readability and maintainability!
 
-## Additional Resources
+<br>
+
+## 📚 Additional Resources
 
 Here are some additional resources to help the understanding of reducing complexity by avoiding nested conditionals:
 
-- CodeHealth: Why readability matters issue
-- Khan Academy: What are nested conditionals
-- Wikipedia: Guard clauses (computer science)
+- Khan Academy: [What are nested conditionals](https://www.khanacademy.org/computing/ap-computer-science-principles/programming-101/boolean-logic/a/nested-conditionals)
+- Wikipedia: [Guard clauses (computer science)](<https://en.wikipedia.org/wiki/Guard_(computer_science)>)
 
-## Special Thanks
+<br>
 
-Special thanks to @kevinchang, @jungchang, and @bettycakez for contributing and advising content for this issue.
+## ❤️ Special Thanks
+
+Special thanks to @kevinchang, @jungchang, and @bettycakez for contributing and providing guidance for this post.

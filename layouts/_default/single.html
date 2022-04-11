@@ -1,23 +1,39 @@
 {{ define "main" }}
-<section class="post-heading">
-  <h1>{{ .Title }}</h1>
-  <div class="post-date">{{ .PublishDate.Format "January 2, 2006" }}</div>
-  <ul class="post-tags">
-    {{ range $tag := .Params.Tags }}
-    <li>
-      <a href="{{ $.Site.BaseURL }}tags/{{ $tag | urlize | lower  }}"
-        >{{ $tag }}</a
-      >
-    </li>
+<article class="post">
+  <section class="post-heading">
+    <h1>{{ .Title }}</h1>
+    <div class="post-date">{{ .PublishDate.Format "January 2, 2006" }}</div>
+    <ul class="post-tags">
+      {{ range $tag := .Params.Tags }}
+      <li data-tag="{{$tag}}">
+        <a href="{{ $.Site.BaseURL }}tags/{{ $tag | urlize | lower  }}"
+          >{{ $tag }}</a
+        >
+      </li>
+      {{end}}
+    </ul>
+  </section>
+  <secion class="post-content"> {{ .Content }} </secion>
+  <hr />
+  {{ partial "join.html"}}
+  <section class="post-navigate">
+    {{with .Prev}}
+    <a class="prev" href="{{.Permalink}}">
+      <div class="arrow"><</div>
+      <div class="info">
+        <div class="title">{{.Title}}</div>
+        <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
+      </div>
+    </a>
+    {{end}} {{with .Next}}
+    <a class="next" href="{{.Permalink}}">
+      <div class="info">
+        <div class="title">{{.Title}}</div>
+        <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
+      </div>
+      <div class="arrow">></div>
+    </a>
     {{end}}
-  </ul>
-</section>
-<secion class="post-content"> {{ .Content }} </secion>
-<section class="post-navigate">
-  {{with .Prev}}
-  <a class="prev" href="{{.Permalink}}">< {{.Title}}</a>
-  {{end}} {{with .Next}}
-  <a class="next" href="{{.Permalink}}">{{.Title}} ></a>
-  {{end}}
-</section>
+  </section>
+</article>
 {{ end }}
