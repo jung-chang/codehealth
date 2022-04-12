@@ -1,6 +1,35 @@
 {{ define "main" }}
-<div id="home-jumbotron" class="jumbotron text-center">
-  <h1 class="title">{{ .Site.Title }}</h1>
-  HOME
-</div>
+<section class="heading">
+  <h1>codehealth.dev</h1>
+  <p>
+    Code health is very important to the reobustness and longevity of
+    programming projects. This is a blog that contains a series of episodes and
+    resources that provide tips and tricks for writing readable and maintainable
+    code.
+  </p>
+</section>
+<section class="featured">
+  <h1>Featured</h1>
+  {{ range $post := $.Site.Params.featuredPosts }}
+    {{ with $.Site.GetPage $post }}
+      <div class="feature-post">
+        <h1>{{.Title}}</h1>
+        {{ partial "post-tags.html" . }}
+        <p>{{.Summary}}</p>
+      </div>
+    {{ end }}
+  {{ end }}
+</section>
+<section class="latest">
+  <h1>Latest</h1>
+  {{- range ( where site.RegularPages "Section" "posts" | first 10 ) }}
+  <div class="latest-post">
+    <div class="info">
+      <h1>{{.Title}}</h1>
+      {{ partial "post-tags.html" . }}
+    </div>
+    <div class="date">{{ .PublishDate.Format "January 2, 2006" }}</div>
+  </div>
+  {{ end }}
+</section>
 {{ end }}

@@ -3,15 +3,12 @@
   <section class="post-heading">
     <h1>{{ .Title }}</h1>
     <div class="post-date">{{ .PublishDate.Format "January 2, 2006" }}</div>
+    {{ partial "post-tags.html" . }} {{/*
     <ul class="post-tags">
-      {{ range $tag := .Params.Tags }}
-      <li data-tag="{{$tag}}">
-        <a href="{{ $.Site.BaseURL }}tags/{{ $tag | urlize | lower  }}"
-          >{{ $tag }}</a
-        >
-      </li>
-      {{end}}
+      {{ range $tag := .Params.Tags }} {{ partial "post-tag.html" (dict
+      "context" . "tag" $tag)}} {{end}}
     </ul>
+    */}}
   </section>
   <secion class="post-content"> {{ .Content }} </secion>
   <hr />

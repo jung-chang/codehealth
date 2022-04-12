@@ -19,27 +19,6 @@
   color: rgba(0, 0, 0, 60%);
 }
 
-.post-heading ul.post-tags {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-
-.post-heading ul.post-tags li {
-  padding: 6px 16px;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.post-heading ul.post-tags li a {
-  text-decoration: none;
-  color: #333333;
-}
-
 .post-navigate a {
   color: #333333;
   text-decoration: none;
@@ -55,7 +34,8 @@
   color: rgba(0, 0, 0, 60%);
 }
 
-.post-navigate .prev, .post-navigate .next {
+.post-navigate .prev,
+.post-navigate .next {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -76,21 +56,4 @@
   content: "";
   clear: both;
   display: table;
-}
-
-/* Pill colors for tags */
-.post-heading ul.post-tags li:hover {
-  filter: brightness(103%);
-}
-
-.post-heading ul.post-tags li[data-tag="code health"] {
-  background-color: #FDEEEA
-}
-
-.post-heading ul.post-tags li[data-tag="javascript"] {
-  background-color: #EAECFD;
-}
-
-.post-heading ul.post-tags li[data-tag="typescript"] {
-  background-color: #E0F3F0;
 }

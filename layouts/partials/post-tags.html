@@ -1,0 +1,17 @@
+<ul class="post-tags">
+  {{ range $tag := .Params.Tags }}
+  <li class="post-tag" data-tag="{{ $tag }}">
+    <a href="/{{ $.Site.BaseURL }}tags/{{ $tag | urlize | lower  }}">
+      {{ $tag }}
+    </a>
+  </li>
+  {{end}}
+</ul>
+
+{{/*
+<li class="post-tag" data-tag="{{ .tag }}">
+  <a href="/{{ $.Site.BaseURL }}tags/{{ .tag | urlize | lower  }}">
+    {{ .tag }}
+  </a>
+</li>
+*/}}

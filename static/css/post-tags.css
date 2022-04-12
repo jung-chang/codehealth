@@ -1,0 +1,36 @@
+.post-tags {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.post-tags li {
+  padding: 6px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.post-tags a {
+  text-decoration: none;
+  color: #333333;
+}
+
+li.post-tag:hover {
+  filter: brightness(103%);
+}
+
+li.post-tag[data-tag="code health"] {
+  background-color: #fdeeea;
+}
+
+li.post-tag[data-tag="javascript"] {
+  background-color: #eaecfd;
+}
+
+li.post-tag[data-tag="typescript"] {
+  background-color: #e0f3f0;
+}

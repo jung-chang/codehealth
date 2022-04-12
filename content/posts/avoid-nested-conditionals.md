@@ -1,5 +1,6 @@
 ---
 title: "Avoid Nested Conditionals"
+summary: "Improve readability code by flattening nested conditionals with guard clauses."
 date: 2022-04-07T20:28:13-04:00
 tags: ["code health", "javascript"]
 draft: true
@@ -12,18 +13,18 @@ Let’s take a look at this example code block for error checking a response fro
 
 const response = await fetch('www.example.com');
 if (response.status === HTTP_200_OK) {
-  if (response.getContentType() === 'application/json') {
-    const data = response.getData();
-    if (data.success) {
-      return data;
-    } else {
-      return Error('Data unsuccessful');
-    }
-  } else {
-    return Error('Bad content type');
-  }
+if (response.getContentType() === 'application/json') {
+const data = response.getData();
+if (data.success) {
+return data;
 } else {
-  return Error('Response unsuccessful');
+return Error('Data unsuccessful');
+}
+} else {
+return Error('Bad content type');
+}
+} else {
+return Error('Response unsuccessful');
 }
 
 {{< /highlight >}}
@@ -38,14 +39,14 @@ How can we improve this? We can flatten the nested conditionals by decoupling th
 
 const response = await fetch("www.example.com");
 if (response.status !== HTTP_200_OK) {
-  return Error("Response unsuccessful");
+return Error("Response unsuccessful");
 }
 if (response.getContentType() !== "application/json") {
-  return Error("Bad content type");
+return Error("Bad content type");
 }
 const data = response.getData();
 if (!data.success) {
-  return Error("Data unsuccessful");
+return Error("Data unsuccessful");
 }
 return data;
 
