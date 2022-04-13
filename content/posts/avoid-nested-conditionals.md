@@ -2,7 +2,7 @@
 title: "Avoid Nested Conditionals"
 summary: "Improve readability code by flattening nested conditionals with guard clauses."
 date: 2022-04-07T20:28:13-04:00
-tags: ["code health", "javascript"]
+tags: ["clean code", "javascript"]
 draft: true
 ---
 

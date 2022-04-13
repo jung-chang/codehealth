@@ -3,6 +3,7 @@
 @import "footer.css";
 @import "join.css";
 @import "post-tags.css";
+@import "index.css";
 
 body {
   font-family: "Inter", sans-serif;
