@@ -1,9 +1,16 @@
 <ul class="post-tags">
-  {{ range $tag := .Params.Tags }}
-  <li class="post-tag" data-tag="{{ $tag }}">
+  {{ range $tag := .Params.tags }}
+  <li
+    class='post-tag {{ cond ($.Scratch.Get "clickable") "clickable" "" }}'
+    data-tag="{{ $tag }}"
+  >
+    {{ if $.Scratch.Get "clickable" }}
     <a href="/{{ $.Site.BaseURL }}tags/{{ $tag | urlize | lower  }}">
       {{ $tag }}
     </a>
+    {{ else }}
+    <div>{{ $tag }}</div>
+    {{end}}
   </li>
   {{end}}
 </ul>

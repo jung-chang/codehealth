@@ -14,11 +14,12 @@
   <section class="featured">
     {{ range $post := $.Site.Params.featuredPosts }}
       {{ with $.Site.GetPage $post }}
-        <div class="feature-post">
-          <a href="{{ .RelPermalink  | urlize | lower  }}"><h1>{{.Title}}</h1></a>
+        <a href="{{ .RelPermalink  | urlize | lower  }}" class="feature-post">
+          <h1>{{.Title}}</h1>
+          {{ .Scratch.Set "clickable" false }}
           {{ partial "post-tags.html" . }}
           <p>{{.Summary}}</p>
-        </div>
+        </a>
       {{ end }}
     {{ end }}
   </section>
@@ -35,6 +36,7 @@
     </div>
     <hr/>
     {{ end }}
+    <a class="read-more" href="/posts">Read More</a>
   </section>
 </div>
 {{ end }}

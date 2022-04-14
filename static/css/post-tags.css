@@ -14,12 +14,13 @@
   cursor: pointer;
 }
 
-.post-tags a {
+.post-tags a,
+.post-tags div {
   text-decoration: none;
   color: #333333;
 }
 
-li.post-tag:hover {
+li.post-tag.clickable:hover {
   filter: brightness(103%);
 }
 
