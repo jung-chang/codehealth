@@ -1,3 +1,18 @@
+{{partial "subscribe-dialog.html" .}}
 <header>
   <a href="/">codehealth.dev</a>
+  <div class="subscribe" onclick="showSubscribeDialog();">Susbcribe</div>
 </header>
+<script>
+  const subscribeDialog = document.querySelector("dialog.subscribe");
+  const showSubscribeDialog = () => {
+    if (!!!subscribeDialog) {
+      return;
+    }
+    if (subscribeDialog.open) {
+      subscribeDialog.close();
+    } else {
+      subscribeDialog.showModal();
+    }
+  };
+</script>
