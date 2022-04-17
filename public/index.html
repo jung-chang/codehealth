@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="generator" content="Hugo 0.68.3"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+		<link rel="stylesheet" type="text/css" href="/css/syntax.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+
+		<title>CodeHealth</title>
+	</head>
+	<body>
+		<dialog class="subscribe">
+			<section class="join">
+				<h1>💌 Interested in reading more?</h1>
+				<h2>Join the community and subscribe to the newsletter for updates!</h2>
+			</section>
+		</dialog>
+
+		<header>
+			<a href="/">codehealth.dev</a>
+			<div class="subscribe" onclick="showSubscribeDialog();">Susbcribe</div>
+		</header>
+		<script>
+			const subscribeDialog = document.querySelector("dialog.subscribe");
+const showSubscribeDialog = () => {
+if (!!! subscribeDialog) {
+return;
+}
+if (subscribeDialog.open) {
+subscribeDialog.close();
+} else {
+subscribeDialog.showModal();
+}
+};
+
+subscribeDialog.addEventListener("click", function (event) {
+const rect = subscribeDialog.getBoundingClientRect();
+const isInDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+if (! isInDialog) {
+subscribeDialog.close();
+}
+});
+		</script>
+		<div id="content">
+			<div class="home">
+				<section class="heading">
+					<h1>codehealth.dev</h1>
+					<p>
+						Code health is very important to the reobustness and longevity of programming projects. This is a blog that contains a series of episodes and resources that provide tips and tricks for writing readable and maintainable code.
+					</p>
+				</section>
+
+				<h1 class="section-title">Featured</h1>
+				<section class="featured">
+
+
+					<a href="/posts/avoid-nested-conditionals/" class="feature-post">
+						<h1>Avoid Nested Conditionals</h1>
+
+						<ul class="post-tags">
+
+							<li class='post-tag ' data-tag="clean code">
+
+								<div>clean code</div>
+
+							</li>
+
+							<li class='post-tag ' data-tag="javascript">
+
+								<div>javascript</div>
+
+							</li>
+
+						</ul>
+
+						<p>Improve readability code by flattening nested conditionals with guard clauses.</p>
+					</a>
+
+
+					<a href="/posts/simplify-long-list-of-parameters/" class="feature-post">
+						<h1>Simplify Long List of Parameters</h1>
+
+						<ul class="post-tags">
+
+							<li class='post-tag ' data-tag="clean code">
+
+								<div>clean code</div>
+
+							</li>
+
+							<li class='post-tag ' data-tag="typescript">
+
+								<div>typescript</div>
+
+							</li>
+
+						</ul>
+
+						<p>simplify content</p>
+					</a>
+
+
+				</section>
+
+				<h1 class="section-title">Latest</h1>
+				<section class="latest-posts">
+
+					<div class="latest-post">
+						<div class="info">
+							<a href="/posts/use-comments-wisely/">
+								<h1>Use Comments Wisely</h1>
+							</a>
+
+							<ul class="post-tags">
+
+								<li class='post-tag ' data-tag="documentation">
+
+									<div>documentation</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+						<div class="date">April 12, 2022</div>
+					</div>
+					<hr/>
+
+					<div class="latest-post">
+						<div class="info">
+							<a href="/posts/todos-and-todonts/">
+								<h1>Todos and Todonts</h1>
+							</a>
+
+							<ul class="post-tags">
+
+								<li class='post-tag ' data-tag="documentation">
+
+									<div>documentation</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+						<div class="date">April 12, 2022</div>
+					</div>
+					<hr/>
+
+					<div class="latest-post">
+						<div class="info">
+							<a href="/posts/use-positive-booleans/">
+								<h1>Use Positive Booleans</h1>
+							</a>
+
+							<ul class="post-tags">
+
+								<li class='post-tag ' data-tag="clean code">
+
+									<div>clean code</div>
+
+								</li>
+
+								<li class='post-tag ' data-tag="typescript">
+
+									<div>typescript</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+						<div class="date">April 12, 2022</div>
+					</div>
+					<hr/>
+
+					<div class="latest-post">
+						<div class="info">
+							<a href="/posts/good-error-messages/">
+								<h1>Good Error Messages</h1>
+							</a>
+
+							<ul class="post-tags">
+
+								<li class='post-tag ' data-tag="debugging">
+
+									<div>debugging</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+						<div class="date">April 8, 2022</div>
+					</div>
+					<hr/>
+
+					<div class="latest-post">
+						<div class="info">
+							<a href="/posts/simplify-long-list-of-parameters/">
+								<h1>Simplify Long List of Parameters</h1>
+							</a>
+
+							<ul class="post-tags">
+
+								<li class='post-tag ' data-tag="clean code">
+
+									<div>clean code</div>
+
+								</li>
+
+								<li class='post-tag ' data-tag="typescript">
+
+									<div>typescript</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+						<div class="date">April 8, 2022</div>
+					</div>
+					<hr/>
+
+					<div class="latest-post">
+						<div class="info">
+							<a href="/posts/avoid-nested-conditionals/">
+								<h1>Avoid Nested Conditionals</h1>
+							</a>
+
+							<ul class="post-tags">
+
+								<li class='post-tag ' data-tag="clean code">
+
+									<div>clean code</div>
+
+								</li>
+
+								<li class='post-tag ' data-tag="javascript">
+
+									<div>javascript</div>
+
+								</li>
+
+							</ul>
+
+						</div>
+						<div class="date">April 7, 2022</div>
+					</div>
+					<hr/>
+
+					<a class="read-more" href="/posts">Read More</a>
+				</section>
+			</div>
+
+		</div>
+		<footer>
+			<a href="/" class="home">codehealth.dev</div>
+		</footer>
+	</body>
+</html>

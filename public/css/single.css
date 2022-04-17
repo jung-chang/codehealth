@@ -1,0 +1,59 @@
+.post {
+  line-height: 1.4;
+}
+
+.post hr {
+  width: 200px;
+  border: 1px solid rgba(0, 0, 0, 5%);
+  margin: 50px auto;
+}
+
+.post-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 0 15px 0;
+}
+
+.post-heading .post-date {
+  color: rgba(0, 0, 0, 60%);
+}
+
+.post-navigate a {
+  color: #333333;
+  text-decoration: none;
+  max-width: 45%;
+}
+
+.post-navigate a:hover {
+  opacity: 0.7;
+}
+
+.post-navigate .date {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 60%);
+}
+
+.post-navigate .prev,
+.post-navigate .next {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+.post-navigate .prev {
+  float: left;
+  text-align: left;
+}
+
+.post-navigate .next {
+  float: right;
+  text-align: right;
+}
+
+.post-navigate:after {
+  content: "";
+  clear: both;
+  display: table;
+}

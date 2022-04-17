@@ -1,10 +1,15 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "CodeHealth"
+paginate = 10
+
+disableKinds = ['taxonomy', 'term']
+[taxonomies]
+  tags = ""
+  categories = ""
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
-
 [markup.highlight]
       codeFences = true
       guessSyntax = true
@@ -20,4 +25,4 @@ unsafe= true
             "/posts/avoid-nested-conditionals.md", 
             "/posts/simplify-long-list-of-parameters.md",
       ]
-      test = true
+

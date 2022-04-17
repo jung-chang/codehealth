@@ -1,42 +1,40 @@
 {{ define "main" }}
-<div class="home">
-  <section class="heading">
-    <h1>codehealth.dev</h1>
-    <p>
-      Code health is very important to the reobustness and longevity of
-      programming projects. This is a blog that contains a series of episodes and
-      resources that provide tips and tricks for writing readable and maintainable
-      code.
-    </p>
-  </section>
+	<div class="home">
+		<section class="heading">
+			<h1>codehealth.dev</h1>
+			<p>
+				Code health is very important to the reobustness and longevity of programming projects. This is a blog that contains a series of episodes and resources that provide tips and tricks for writing readable and maintainable code.
+			</p>
+		</section>
 
-  <h1 class="section-title">Featured</h1>
-  <section class="featured">
-    {{ range $post := $.Site.Params.featuredPosts }}
-      {{ with $.Site.GetPage $post }}
-        <a href="{{ .RelPermalink  | urlize | lower  }}" class="feature-post">
-          <h1>{{.Title}}</h1>
-          {{ .Scratch.Set "clickable" false }}
-          {{ partial "post-tags.html" . }}
-          <p>{{.Summary}}</p>
-        </a>
-      {{ end }}
-    {{ end }}
-  </section>
+		<h1 class="section-title">Featured</h1>
+		<section class="featured">
+			{{ range $post := $.Site.Params.featuredPosts }}
+				{{ with $.Site.GetPage $post }}
+					<a href="{{ .RelPermalink | urlize | lower }}" class="feature-post">
+						<h1>{{.Title}}</h1>
+						{{ .Scratch.Set "clickable" false }}
+						{{ partial "post-tags.html" . }}
+						<p>{{ .Summary }}</p>
+					</a>
+				{{ end }}
+			{{ end }}
+		</section>
 
-  <h1 class="section-title">Latest</h1>
-  <section class="latest">
-    {{range ( where site.RegularPages "Section" "posts" | first 10 ) }}
-    <div class="latest-post">
-      <div class="info">
-        <a href="{{ .RelPermalink  | urlize | lower  }}"><h1>{{.Title}}</h1></a>
-        {{ partial "post-tags.html" . }}
-      </div>
-      <div class="date">{{ .PublishDate.Format "January 2, 2006" }}</div>
-    </div>
-    <hr/>
-    {{ end }}
-    <a class="read-more" href="/posts">Read More</a>
-  </section>
-</div>
+		<h1 class="section-title">Latest</h1>
+		<section class="latest-posts">
+			{{range ( where site.RegularPages "Section" "posts" | first 4 ) }}
+				<a class="latest-post" href="{{ .RelPermalink | urlize | lower }}">
+					<div class="info">
+						<h1>{{ .Title }}</h1>
+						{{ .Scratch.Set "clickable" false }}
+						{{ partial "post-tags.html" . }}
+					</div>
+					<div class="date">{{ .PublishDate.Format "January 2, 2006" }}</div>
+				</a>
+				<hr/>
+			{{ end }}
+			<a class="read-more" href="/posts">Read More</a>
+		</section>
+	</div>
 {{ end }}

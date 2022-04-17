@@ -76,18 +76,3 @@
   font-weight: normal;
   color: #333333;
 }
-
-.home .featured .post-tags {
-  margin-top: 12px;
-}
-
-.home .featured .post-tag {
-  font-size: 12px;
-}
-
-dialog.subscribe {
-  border: 0;
-  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 6px;
-  border-radius: 5px;
-  padding: 30px;
-}

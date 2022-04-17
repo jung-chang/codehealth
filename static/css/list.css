@@ -1,0 +1,18 @@
+.list-page h1.title {
+  font-weight: bold;
+  font-size: 32px;
+  color: #4a4a4a;
+  padding: 60px 0;
+}
+
+.list-page .pagination-controls {
+  margin-top: 50px;
+}
+
+.list-page .pagination-controls .prev {
+  float: left;
+}
+
+.list-page .pagination-controls .next {
+  float: right;
+}

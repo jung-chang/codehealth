@@ -1,0 +1,17 @@
+section.join {
+    color: #333333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+section.join h1 {
+    font-size: 20px;
+}
+
+section.join h2 {
+    font-size: 14px;
+}

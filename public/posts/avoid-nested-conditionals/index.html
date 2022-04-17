@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet"> 
+
+    
+    
+    <title>CodeHealth | Avoid Nested Conditionals</title>
+</head><body><dialog class="subscribe"><section class="join">
+  <h1>💌 Interested in reading more?</h1>
+  <h2>Join the community and subscribe to the newsletter for updates!</h2>
+</section>
+</dialog>
+<style>
+  dialog.subscribe {
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 6px;
+    border-radius: 5px;
+    padding: 30px;
+  }
+</style>
+
+<header>
+	<a href="/">codehealth.dev</a>
+	<div class="subscribe" onclick="showSubscribeDialog();">Susbcribe</div>
+</header>
+<script>
+	const subscribeDialog = document.querySelector("dialog.subscribe");
+const showSubscribeDialog = () => {
+if (!!! subscribeDialog) {
+return;
+}
+if (subscribeDialog.open) {
+subscribeDialog.close();
+} else {
+subscribeDialog.showModal();
+}
+};
+
+subscribeDialog.addEventListener("click", function (event) {
+const rect = subscribeDialog.getBoundingClientRect();
+const isInDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+if (! isInDialog) {
+subscribeDialog.close();
+}
+});
+</script>
+<div id="content">
+<article class="post">
+  <section class="post-heading">
+    <h1>Avoid Nested Conditionals</h1>
+    <div class="post-date">April 7, 2022</div>
+     <ul class="post-tags">
+  
+  <li
+    class='post-tag '
+    data-tag="clean code"
+  >
+    
+    <div>clean code</div>
+    
+  </li>
+  
+  <li
+    class='post-tag '
+    data-tag="javascript"
+  >
+    
+    <div>javascript</div>
+    
+  </li>
+  
+</ul>
+
+  </section>
+  <secion class="post-content"> <p>Let’s take a look at this example code block for error checking a response from a network request. Can we easily determine which errors are returned for which conditional?</p>
+<div class="bad-code">
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;www.example.com&#39;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="nx">HTTP_200_OK</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">getContentType</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span> <span class="p">{</span>
+<span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Data unsuccessful&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Bad content type&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Response unsuccessful&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+
+<style>
+  .bad-code {
+    background-color: rgba(254, 128, 128, 3%);
+    border: 2px solid #fe8080;
+    border-radius: 10px;
+    padding: 20px;
+  }
+</style>
+
+<p>It’s not obvious which errors are a result of which if statement due to the complexities introduced by nested conditionals.</p>
+<p>How can we improve this? We can flatten the nested conditionals by decoupling the if statements like the following:</p>
+<div class="good-code">
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;www.example.com&#34;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">!==</span> <span class="nx">HTTP_200_OK</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Response unsuccessful&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">getContentType</span><span class="p">()</span> <span class="o">!==</span> <span class="s2">&#34;application/json&#34;</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Bad content type&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">getData</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">.</span><span class="nx">success</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">&#34;Data unsuccessful&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="nx">data</span><span class="p">;</span>
+</code></pre></div>
+</div>
+
+<style>
+  .good-code {
+    background-color: rgba(154, 207, 165, 3%);
+    border: 2px solid #9acfa5;
+    border-radius: 10px;
+    padding: 20px;
+  }
+</style>
+
+<p>By refactoring the conditional statements we are able to <strong>improve readability</strong> and clarify which errors are returned for each specific condition. This coding pattern uses <strong>guard clauses</strong> as an effective way to guard against invalid conditions to avoid errors.</p>
+<div class="tldr">
+  <div class="title">TLDR</div>
+<p>General rules to reduce complexity for nested conditionals:</p>
+<ol>
+<li>Avoid nesting beyond two levels; this will greatly improve code readability.</li>
+<li>Use guard clauses to effectively flatten nested logic.</li>
+<li>Decouple nested logic into separate functions if it’s not easily understandable.</li>
+</ol>
+</div>
+<style>
+  .tldr {
+    background-color: rgba(117, 147, 193, 3%);
+    border: 2px solid #7593c1;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .tldr .title {
+    padding-bottom: 10px;
+    color: #7593c1;
+  }
+
+  .tldr p,
+  .tldr ol {
+    margin: 0;
+  }
+</style>
+<p>Always think about simplifying code whenever possible to improve readability and maintainability!</p>
+<br>
+<h2 id="-additional-resources">📚 Additional Resources</h2>
+<p>Here are some additional resources to help the understanding of reducing complexity by avoiding nested conditionals:</p>
+<ul>
+<li>Khan Academy: <a href="https://www.khanacademy.org/computing/ap-computer-science-principles/programming-101/boolean-logic/a/nested-conditionals">What are nested conditionals</a></li>
+<li>Wikipedia: <a href="https://en.wikipedia.org/wiki/Guard_(computer_science)">Guard clauses (computer science)</a></li>
+</ul>
+<br>
+<h2 id="-special-thanks">❤️ Special Thanks</h2>
+<p>Special thanks to @kevinchang, @jungchang, and @bettycakez for contributing and providing guidance for this post.</p>
+ </secion>
+  <hr /> 
+  <section class="join">
+  <h1>💌 Interested in reading more?</h1>
+  <h2>Join the community and subscribe to the newsletter for updates!</h2>
+</section>
+
+  <section class="post-navigate">
+     
+    <a class="next" href="/posts/simplify-long-list-of-parameters/">
+      <div class="info">
+        <div class="title">Simplify Long List of Parameters</div>
+        <div class="date">Apr 8, 2022</div>
+      </div>
+      <div class="arrow">></div>
+    </a>
+    
+  </section>
+</article>
+
+        </div><footer><a href="/" class="home">codehealth.dev</div></footer></body>
+</html>

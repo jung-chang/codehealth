@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2022-04-12T23:46:41-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2022-04-12T23:46:41-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/use-comments-wisely/</loc>
+    <lastmod>2022-04-12T23:46:41-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/todos-and-todonts/</loc>
+    <lastmod>2022-04-12T23:42:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/use-positive-booleans/</loc>
+    <lastmod>2022-04-12T23:41:20-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/good-error-messages/</loc>
+    <lastmod>2022-04-08T02:26:59-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/simplify-long-list-of-parameters/</loc>
+    <lastmod>2022-04-08T01:48:59-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/avoid-nested-conditionals/</loc>
+    <lastmod>2022-04-07T20:28:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+  </url>
+  
+</urlset>

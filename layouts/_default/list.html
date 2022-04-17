@@ -1,12 +1,30 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
-{{ end }}
+	<div class="list-page">
+		<h1 class="title">Latest Posts</h1>
+		<section class="latest-posts">
+			{{ range .Paginator.Pages }}
+				<a class="latest-post" href="{{ .RelPermalink | urlize | lower }}">
+					<div class="info">
+						<h1>{{ .Title }}</h1>
+						{{ .Scratch.Set "clickable" false }}
+						{{ partial "post-tags.html" . }}
+					</div>
+					<div class="date">{{ .PublishDate.Format "January 2, 2006" }}</div>
+				</a>
+				<hr/>
+			{{ end }}
+			<div class="pagination-controls">
+				{{ if .Paginator.HasPrev }}
+					<a class="pref" href="{{ .Paginator.Prev.URL }}">
+						< Prev
+					</a>
+				{{ end }}
+				{{ if .Paginator.HasNext }}
+					<a class="next" href="{{ .Paginator.Next.URL }}">
+						Next >
+					</a>
+				{{ end }}
+			</div>
+		</section>
+	</div>
 {{ end }}

@@ -1,18 +1,26 @@
 {{partial "subscribe-dialog.html" .}}
 <header>
-  <a href="/">codehealth.dev</a>
-  <div class="subscribe" onclick="showSubscribeDialog();">Susbcribe</div>
+	<a href="/">codehealth.dev</a>
+	<div class="subscribe" onclick="showSubscribeDialog();">Susbcribe</div>
 </header>
 <script>
-  const subscribeDialog = document.querySelector("dialog.subscribe");
-  const showSubscribeDialog = () => {
-    if (!!!subscribeDialog) {
-      return;
-    }
-    if (subscribeDialog.open) {
-      subscribeDialog.close();
-    } else {
-      subscribeDialog.showModal();
-    }
-  };
+	const subscribeDialog = document.querySelector("dialog.subscribe");
+const showSubscribeDialog = () => {
+if (!!! subscribeDialog) {
+return;
+}
+if (subscribeDialog.open) {
+subscribeDialog.close();
+} else {
+subscribeDialog.showModal();
+}
+};
+
+subscribeDialog.addEventListener("click", function (event) {
+const rect = subscribeDialog.getBoundingClientRect();
+const isInDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
+if (! isInDialog) {
+subscribeDialog.close();
+}
+});
 </script>

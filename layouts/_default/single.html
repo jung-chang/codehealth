@@ -3,10 +3,10 @@
   <section class="post-heading">
     <h1>{{ .Title }}</h1>
     <div class="post-date">{{ .PublishDate.Format "January 2, 2006" }}</div>
-    {{ .Scratch.Set "clickable" true }} {{ partial "post-tags.html" .}}
+    {{ .Scratch.Set "clickable" false }} {{ partial "post-tags.html" .}}
   </section>
   <secion class="post-content"> {{ .Content }} </secion>
-  <hr />
+  <hr /> 
   {{ partial "join.html"}}
   <section class="post-navigate">
     {{with .Prev}}
