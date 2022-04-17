@@ -20,9 +20,3 @@ pygmentsCodefences = true
 [markup.goldmark.renderer]
 unsafe= true
 
-[params]
-      featuredPosts = [
-            "/posts/avoid-nested-conditionals.md", 
-            "/posts/simplify-long-list-of-parameters.md",
-      ]
-

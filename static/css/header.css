@@ -22,4 +22,5 @@ header a:hover,
 header div.subscribe:hover {
   opacity: 0.7;
   transition: all 0.4s ease;
+  text-decoration: none;
 }

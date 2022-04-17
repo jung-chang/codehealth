@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<div class="list-page">
-		<h1 class="title">Latest Posts</h1>
+		<h1 class="title">All Posts</h1>
 		<section class="latest-posts">
 			{{ range .Paginator.Pages }}
 				<a class="latest-post" href="{{ .RelPermalink | urlize | lower }}">

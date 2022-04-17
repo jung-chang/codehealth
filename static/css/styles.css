@@ -43,6 +43,10 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
   transition: all 0.4s ease;
+  text-decoration: underline;
+}
+
+a.email {
+  color: crimson;
 }

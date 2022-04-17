@@ -25,10 +25,6 @@
   max-width: 45%;
 }
 
-.post-navigate a:hover {
-  opacity: 0.7;
-}
-
 .post-navigate .date {
   font-size: 14px;
   color: rgba(0, 0, 0, 60%);
