@@ -73,5 +73,5 @@ Always think about simplifying code whenever possible to improve readability and
 
 Here are some additional resources to help the understanding of reducing complexity by avoiding nested conditionals:
 
-- Khan Academy: [What are nested conditionals](https://www.khanacademy.org/computing/ap-computer-science-principles/programming-101/boolean-logic/a/nested-conditionals)
-- Wikipedia: [Guard clauses (computer science)](<https://en.wikipedia.org/wiki/Guard_(computer_science)>)
+- Khan Academy: <a href="https://www.khanacademy.org/computing/ap-computer-science-principles/programming-101/boolean-logic/a/nested-conditionals" target="_blank">What are nested conditionals</a>
+- Wikipedia: <a href="https://en.wikipedia.org/wiki/Guard_(computer_science)" target="_blank">Guard clauses (computer science)</a>

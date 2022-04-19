@@ -3,7 +3,7 @@ header {
   align-items: center;
   height: 60px;
   background-color: white;
-  box-shadow: lightgray 0 1px 4px;
+  box-shadow: lightgray 0 1px 1px;
   padding: 0 15px;
   justify-content: space-between;
 }

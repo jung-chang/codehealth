@@ -19,6 +19,10 @@
   color: dimgray;
 }
 
+.post-content a {
+  color: cornflowerblue;
+}
+
 .post-navigate {
   padding-top: 30px;
 }
