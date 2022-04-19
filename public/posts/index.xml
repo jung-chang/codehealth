@@ -6,55 +6,10 @@
     <description>Recent content in Posts on CodeHealth</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Apr 2022 23:46:41 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 07 Apr 2022 20:28:13 -0400</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Use Comments Wisely</title>
-      <link>/posts/use-comments-wisely/</link>
-      <pubDate>Tue, 12 Apr 2022 23:46:41 -0400</pubDate>
-      
-      <guid>/posts/use-comments-wisely/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Todos and Todonts</title>
-      <link>/posts/todos-and-todonts/</link>
-      <pubDate>Tue, 12 Apr 2022 23:42:53 -0400</pubDate>
-      
-      <guid>/posts/todos-and-todonts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Use Positive Booleans</title>
-      <link>/posts/use-positive-booleans/</link>
-      <pubDate>Tue, 12 Apr 2022 23:41:20 -0400</pubDate>
-      
-      <guid>/posts/use-positive-booleans/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Good Error Messages</title>
-      <link>/posts/good-error-messages/</link>
-      <pubDate>Fri, 08 Apr 2022 02:26:59 -0400</pubDate>
-      
-      <guid>/posts/good-error-messages/</guid>
-      <description>error messages</description>
-    </item>
-    
-    <item>
-      <title>Simplify Long List of Parameters</title>
-      <link>/posts/simplify-long-list-of-parameters/</link>
-      <pubDate>Fri, 08 Apr 2022 01:48:59 -0400</pubDate>
-      
-      <guid>/posts/simplify-long-list-of-parameters/</guid>
-      <description>simplify content</description>
-    </item>
     
     <item>
       <title>Avoid Nested Conditionals</title>

@@ -11,7 +11,7 @@
 
 	
 	
-	<title>CodeHealth | </title>
+	<title>CodeHealth | 404 Page not found</title>
 </head>
 <body><dialog class="subscribe"><section class="join">
 	<h1>💌 Interested in reading more?</h1>
@@ -124,17 +124,41 @@
 	});
 </script>
 <div id="content">
-	<div class="list-page">
-		<h1 class="title">All Posts</h1>
-		<section class="latest-posts">
-			
-			<div class="pagination-controls">
-				
-				
-			</div>
-		</section>
+	<main id="page-404">
+		<h1 id="title">
+			404
+		</h1>
+		<h2>The page you are looking for cannot be found</h2>
+		<a class="return-home" href="/">Return Home</a>
 	</div>
+</main>
+<style>
+	main#page-404 {
+		min-height: calc(100vh - 100px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		text-align: center;
+	}
 
+	main#page-404 h1 {
+		font-size: 128px;
+		font-weight: bold;
+		color: #333333;
+	}
+
+	main#page-404 h2 {
+		font-size: 24px;
+		color: rgba(0, 0, 0, 60%);
+	}
+
+	main#page-404 a.return-home {
+		color: crimson;
+		font-weight: bold;
+	}
+</style>
 		</div>
 	</body><footer>
 	<a href="/">codehealth.dev</div>

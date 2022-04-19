@@ -13,18 +13,18 @@ Let’s take a look at this example code block for error checking a response fro
 
 const response = await fetch('www.example.com');
 if (response.status === HTTP_200_OK) {
-if (response.getContentType() === 'application/json') {
-const data = response.getData();
-if (data.success) {
-return data;
+  if (response.getContentType() === 'application/json') {
+    const data = response.getData();
+    if (data.success) {
+      return data;
+    } else {
+      return Error('Data unsuccessful');
+    }
+  } else {
+    return Error('Bad content type');
+  }
 } else {
-return Error('Data unsuccessful');
-}
-} else {
-return Error('Bad content type');
-}
-} else {
-return Error('Response unsuccessful');
+  return Error('Response unsuccessful');
 }
 
 {{< /highlight >}}
@@ -39,14 +39,14 @@ How can we improve this? We can flatten the nested conditionals by decoupling th
 
 const response = await fetch("www.example.com");
 if (response.status !== HTTP_200_OK) {
-return Error("Response unsuccessful");
+  return Error("Response unsuccessful");
 }
 if (response.getContentType() !== "application/json") {
-return Error("Bad content type");
+  return Error("Bad content type");
 }
 const data = response.getData();
 if (!data.success) {
-return Error("Data unsuccessful");
+  return Error("Data unsuccessful");
 }
 return data;
 
@@ -75,9 +75,3 @@ Here are some additional resources to help the understanding of reducing complex
 
 - Khan Academy: [What are nested conditionals](https://www.khanacademy.org/computing/ap-computer-science-principles/programming-101/boolean-logic/a/nested-conditionals)
 - Wikipedia: [Guard clauses (computer science)](<https://en.wikipedia.org/wiki/Guard_(computer_science)>)
-
-<br>
-
-## ❤️ Special Thanks
-
-Special thanks to @kevinchang, @jungchang, and @bettycakez for contributing and providing guidance for this post.
