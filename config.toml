@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "CodeHealth"
+enableRobotsTXT = true
 paginate = 10
 
 disableKinds = ['taxonomy', 'term']

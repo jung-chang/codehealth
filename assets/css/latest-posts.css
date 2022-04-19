@@ -8,7 +8,7 @@
 .latest-posts hr {
   border: 0;
   height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 10%);
+  border-top: 1px solid lightgray;
   margin-left: 0;
   margin-right: 0;
 }
@@ -32,7 +32,7 @@
 
 .latest-posts .latest-post .date {
   font-size: 16px;
-  color: rgba(0, 0, 0, 70%);
+  color: dimgray;
 }
 
 .latest-post .post-tags {
@@ -46,12 +46,12 @@
 .latest-posts .read-more {
   margin: 20px auto;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 20%);
+  border: 1px solid lightgray;
   border-radius: 10px;
   color: #333333;
 }
 
 .latest-posts .read-more:hover {
-  border: 1px solid rgba(0, 0, 0, 70%);
+  border: 1px solid dimgray;
   transition: all 0.4s ease;
 }

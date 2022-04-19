@@ -6,8 +6,6 @@
     {{ .Scratch.Set "clickable" false }} {{ partial "post-tags.html" .}}
   </section>
   <secion class="post-content"> {{ .Content }} </secion>
-  <hr /> 
-  {{ partial "join.html"}}
   <section class="post-navigate">
     {{with .Prev}}
     <a class="prev" href="{{.Permalink}}">

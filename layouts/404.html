@@ -1,0 +1,36 @@
+{{ define "main"}}
+	<main id="page-404">
+		<h1 id="title">
+			404
+		</h1>
+		<h2>The page you are looking for cannot be found</h2>
+		<a class="return-home" href="{{ "/" | relURL }}">Return Home</a>
+	</div>
+</main>
+<style>
+	main#page-404 {
+		min-height: calc(100vh - 100px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		text-align: center;
+	}
+
+	main#page-404 h1 {
+		font-size: 128px;
+		font-weight: bold;
+		color: #333333;
+	}
+
+	main#page-404 h2 {
+		font-size: 24px;
+		color: rgba(0, 0, 0, 60%);
+	}
+
+	main#page-404 a.return-home {
+		color: crimson;
+		font-weight: bold;
+	}
+</style>{{ end }}

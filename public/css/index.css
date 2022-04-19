@@ -37,6 +37,16 @@
   line-height: 1.5;
 }
 
+.home .heading .subscribe {
+  color: green;
+  cursor: pointer;
+}
+
+.home .heading .subscribe:hover {
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
 /* Features Section */
 @media only screen and (max-width: 600px) {
   .home .featured {

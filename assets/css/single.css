@@ -4,7 +4,7 @@
 
 .post hr {
   width: 200px;
-  border: 1px solid rgba(0, 0, 0, 5%);
+  border: 1px solid whitesmoke;
   margin: 50px auto;
 }
 
@@ -16,7 +16,11 @@
 }
 
 .post-heading .post-date {
-  color: rgba(0, 0, 0, 60%);
+  color: dimgray;
+}
+
+.post-navigate {
+  padding-top: 30px;
 }
 
 .post-navigate a {
@@ -27,7 +31,7 @@
 
 .post-navigate .date {
   font-size: 14px;
-  color: rgba(0, 0, 0, 60%);
+  color: dimgray;
 }
 
 .post-navigate .prev,

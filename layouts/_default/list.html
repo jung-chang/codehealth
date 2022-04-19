@@ -3,7 +3,7 @@
 		<h1 class="title">All Posts</h1>
 		<section class="latest-posts">
 			{{ range .Paginator.Pages }}
-				<a class="latest-post" href="{{ .RelPermalink | urlize | lower }}">
+				<a class="latest-post" href="{{ .RelPermalink | urlize | lower }}" preload>
 					<div class="info">
 						<h1>{{ .Title }}</h1>
 						{{ .Scratch.Set "clickable" false }}
