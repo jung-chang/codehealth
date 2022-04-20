@@ -23,3 +23,8 @@ header div.subscribe:hover {
   text-decoration: underline;
   transition: all 0.4s ease;
 }
+
+header a.home:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}

@@ -54,4 +54,5 @@
 .latest-posts .read-more:hover {
   border: 1px solid dimgray;
   transition: all 0.4s ease;
+  text-decoration: none;
 }

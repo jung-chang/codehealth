@@ -95,4 +95,9 @@ dialog.subscribe {
   box-shadow: lightgray 0 1px 6px;
   border-radius: 5px;
   padding: 30px;
+  display: none;
+}
+
+dialog.subscribe[open] {
+  display: block;
 }
