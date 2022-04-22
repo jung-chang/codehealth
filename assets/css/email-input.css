@@ -10,13 +10,14 @@ form#collectingemail input {
   outline: none;
 }
 
-form#collectingemail input[type="email"] {
+form#collectingemail input.email {
   background-color: white;
   border-radius: 3px;
   border: 1px solid #e0e0e0;
-  padding: 10px;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 0 6px;
   color: #333333;
+  max-width: 160px;
 }
 
 form#collectingemail .submit {
@@ -29,10 +30,9 @@ form#collectingemail input[type="submit"] {
   background-color: steelblue;
   cursor: pointer;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   border-radius: 3px;
-  width: 70px;
   padding: 10px;
 }
 
@@ -40,11 +40,11 @@ form#collectingemail input[type="submit"]:hover {
   opacity: 0.7;
 }
 
-form#collectingemail.success input[type="email"] {
+form#collectingemail.success input.email {
   background-color: #e0e0e0;
 }
 
-form#collectingemail.error input[type="email"] {
+form#collectingemail.error input.email {
   border: 1px solid #eb5757;
 }
 
@@ -70,7 +70,6 @@ form#collectingemail .error {
 }
 
 form#collectingemail .loader-container {
-  width: 70px;
   background-color: steelblue;
   padding: 0.5px 0;
   border-radius: 5px;
