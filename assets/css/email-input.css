@@ -1,0 +1,124 @@
+form#collectingemail {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 270px;
+  gap: 5px;
+  margin: auto;
+}
+
+form#collectingemail input {
+  outline: none;
+}
+
+form#collectingemail input[type="email"] {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  font-size: 16px;
+  color: #333333;
+}
+
+form#collectingemail .submit {
+  background-color: steelblue;
+  border-radius: 3px;
+  width: 70px;
+}
+
+form#collectingemail input[type="submit"] {
+  background-color: steelblue;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  width: 70px;
+  padding: 10px;
+}
+
+form#collectingemail input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+form#collectingemail.success input[type="email"] {
+  background-color: #e0e0e0;
+}
+
+form#collectingemail.error input[type="email"] {
+  border: 1px solid #eb5757;
+}
+
+form#collectingemail.success input[type="submit"] {
+  background-color: #27ae60;
+  cursor: default;
+}
+
+form#collectingemail.success input[type="submit"]:hover {
+  opacity: 1;
+}
+
+form#collectingemail .hidden {
+  display: none !important;
+}
+
+form#collectingemail .error {
+  display: block;
+  padding-top: 5px;
+  font-size: 14px;
+  color: #eb5757;
+  margin: auto;
+}
+
+form#collectingemail .loader-container {
+  width: 70px;
+  background-color: steelblue;
+  padding: 0.5px 0;
+  border-radius: 5px;
+}
+
+form#collectingemail .loader {
+  color: white;
+  margin: 5px auto;
+}
+
+form#collectingemail .loader,
+form#collectingemail .loader:after {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+form#collectingemail .loader {
+  position: relative;
+  text-indent: -9999em;
+  border-top: 4px solid rgba(255, 255, 255, 0.2);
+  border-right: 4px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+  border-left: 4px solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

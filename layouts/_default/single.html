@@ -6,6 +6,7 @@
     {{ .Scratch.Set "clickable" false }} {{ partial "post-tags.html" .}}
   </section>
   <secion class="post-content"> {{ .Content }} </secion>
+  <section class="subscribe"><hr/>{{partial "join.html" .}}</section>
   <section class="post-navigate">
     {{with .Prev}}
     <a class="prev" href="{{.Permalink}}">
@@ -26,4 +27,5 @@
     {{end}}
   </section>
 </article>
+
 {{ end }}

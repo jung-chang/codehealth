@@ -3,11 +3,12 @@
 		<section class="heading">
 			<h1>codehealth.dev</h1>
 			<p>👋 Hey there, welcome to my code health blog!</p>
-			<p>This blog is about sharing advice and learnings on writing readable and maintanable code for all skill levels. It's meant to be a collaborative effort thus I'm happy to receive any ideas and feedback at
+			<p>This blog is about sharing advice and learnings on writing readable and maintanable code for all skill levels. It's meant to be a collaborative effort so I'm happy to receive any ideas and feedback at
 				<a class="email" href="mailto:hey@codehealth.dev">hey@codehealth.dev</a>
 			</p>
 		</p>
-		<p>Please also <span class="subscribe" onclick="showSubscribeDialog();">subscribe</span> to the blog to receive updates on new posts.</p>
+		<p id="subscribe">Please also subscribe to the blog to receive updates on new posts.</p>
+		{{partial "email-input.html" .}}
 	</section>
 
 	{{ if isset .Site.Params "featuredposts" }}

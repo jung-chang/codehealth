@@ -14,3 +14,7 @@ section.join h1 {
 section.join h2 {
   font-size: 14px;
 }
+
+section.join .sib-form {
+  margin: auto;
+}

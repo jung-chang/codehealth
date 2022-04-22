@@ -20,11 +20,11 @@
 }
 
 .post-content a {
-  color: cornflowerblue;
+  color: steelblue;
 }
 
 .post-navigate {
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 .post-navigate a {
@@ -60,4 +60,11 @@
   content: "";
   clear: both;
   display: table;
+}
+
+section.subscribe hr {
+  width: 300px;
+  margin: 50px auto;
+  border: none;
+  border-top: 1px solid lightgray;
 }

@@ -13,13 +13,13 @@ header a {
   color: #333333;
 }
 
-header div.subscribe {
-  color: green;
+header a.subscribe {
+  color: steelblue;
   cursor: pointer;
 }
 
 header a:hover,
-header div.subscribe:hover {
+header a.subscribe:hover {
   text-decoration: underline;
   transition: all 0.4s ease;
 }

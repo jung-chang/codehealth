@@ -32,16 +32,6 @@
   line-height: 1.5;
 }
 
-.home .heading .subscribe {
-  color: green;
-  cursor: pointer;
-}
-
-.home .heading .subscribe:hover {
-  text-decoration: underline;
-  transition: all 0.4s ease;
-}
-
 /* Features Section */
 @media only screen and (max-width: 600px) {
   .home .featured {
@@ -88,6 +78,11 @@
 
 .home .featured .post-tag {
   font-size: 12px;
+}
+
+.home form#collectingemail,
+.home form#collectingemail .error {
+  margin: 0;
 }
 
 dialog.subscribe {

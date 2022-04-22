@@ -6,7 +6,7 @@
 }
 
 .list-page .pagination-controls {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .list-page .pagination-controls .prev {
@@ -15,4 +15,8 @@
 
 .list-page .pagination-controls .next {
   float: right;
+}
+
+.list-page section.subscribe {
+  margin-top: 80px;
 }
