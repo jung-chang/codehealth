@@ -50,7 +50,7 @@
   function setIsLoading(loading) {
     const form = document.getElementById("collectingemail");
     const submitInput = form.querySelector("input[type='submit']");
-    const emailInput = form.querySelector("input[type='email']");
+    const emailInput = form.querySelector("input.email");
     if (loading) {
       submitInput.className = "hidden";
       submitInput.disabled = true;
@@ -85,7 +85,7 @@
     setIsLoading(false);
     if (response.ok) {
       form.className = "success";
-      const emailInput = form.querySelector("input[type='email']");
+      const emailInput = form.querySelector("input.email");
       emailInput.disabled = true;
       const submitInput = form.querySelector("input[type='submit']");
       submitInput.disabled = true;
