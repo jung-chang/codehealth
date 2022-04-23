@@ -61,12 +61,11 @@ form#collectingemail .hidden {
   display: none !important;
 }
 
-form#collectingemail .error {
+.collectingemail_error {
   display: block;
-  padding-top: 5px;
   font-size: 14px;
   color: #eb5757;
-  margin: auto;
+  margin-top: -10px;
 }
 
 form#collectingemail .loader-container {

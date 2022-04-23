@@ -33,14 +33,14 @@
 
   function showError(text) {
     const form = document.getElementById("collectingemail");
-    let error = form.querySelector(".error");
+    let error = document.querySelector(".collectingemail_error");
     if (!!!error) {
       error = document.createElement("span");
-      form.append(error);
+      form.after(error);
     }
     if (text.length) {
       error.textContent = text;
-      error.className = "error";
+      error.className = "collectingemail_error";
     } else {
       error.textContent = "";
       error.className = "hidden error";

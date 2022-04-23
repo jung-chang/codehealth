@@ -81,8 +81,9 @@
 }
 
 .home form#collectingemail,
-.home form#collectingemail .error {
+.home .collectingemail_error {
   margin: 0;
+  margin-top: 10px;
 }
 
 dialog.subscribe {

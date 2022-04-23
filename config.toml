@@ -19,5 +19,7 @@ pygmentsCodefences = true
       style = "github-light"
 
 [markup.goldmark.renderer]
-unsafe= true
+  unsafe= true
 
+[permalinks]
+  posts = '/:title'
