@@ -1,11 +1,42 @@
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta
+	name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link
+	rel="manifest" href="/site.webmanifest">
+
+	<!-- Primary Meta Tags -->
+	<title>codehealth.dev</title>
+	<meta name="title" content="codehealth.dev">
+	<meta
+	name="description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://codehealth.dev/">
+	<meta property="og:title" content="codehealth.dev">
+	<meta property="og:description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
+	<meta
+	property="og:image" content="/img/card.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://codehealth.dev/">
+	<meta property="twitter:title" content="codehealth.dev">
+	<meta property="twitter:description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
+	<meta property="twitter:image" content="/img/card.png">
+
+
 	{{ $css := resources.Match "**.css" | resources.Concat "main.css" | fingerprint | minify }}
 	<link rel="stylesheet" href="{{ $css.Permalink }}">
 
 	{{ $js := resources.Match "**.js" | resources.Concat "main.js" | fingerprint | minify }}
-	<script src="{{ $js.Permalink }}"></script> 
+	<script src="{{ $js.Permalink }}"></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

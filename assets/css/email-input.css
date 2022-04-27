@@ -6,6 +6,10 @@ form#collectingemail {
   margin: auto;
 }
 
+form#collectingemail * {
+  font-family: "Inter", sans-serif;
+}
+
 form#collectingemail input {
   outline: none;
 }
