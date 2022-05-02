@@ -10,9 +10,7 @@ Suppose we have a function that helps draw a rectangle with some characteristics
 {{< red-code >}}
 {{< highlight javascript >}}
 
-function draw(x: number, y: number, height: number,
-              width: number, color: string,
-              opacity: number, border: number) {
+function draw(x: number, y: number, height: number, width: number, color: string, opacity: number, border: number) {
     // ...drawing logic
 }
 

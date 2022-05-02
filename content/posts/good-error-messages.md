@@ -77,7 +77,7 @@ Considerations when writing good error messages:
 
 ## 📚 Additional Resources
 
-Here are some additional resources to help the understanding of reducing complexity by avoiding nested conditionals:
+Here are some additional resources to help understand how error messages and debugging go together:
 
 - MDN Web Docs: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank">Builtin Error Object</a>
-- Khan Academy: <a href="https://www.khanacademy.org/computing/computer-programming/programming/debugging-programs/a/more-debugging-tip" target="_blank">More Debugging Tips</a>
+- Khan Academy: <a href="https://www.khanacademy.org/computing/computer-programming/programming/debugging-programs/a/more-debugging-tips" target="_blank">More Debugging Tips</a>
