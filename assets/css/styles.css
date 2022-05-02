@@ -7,9 +7,21 @@
 @import "latest-posts.css";
 @import "list.css";
 
+:root {
+  --bg-red: rgba(254, 128, 128, 3%);
+  --light-red: #fe8080;
+  --dark-red: #d73a49;
+
+  --bg-green: rgba(154, 207, 165, 3%);
+  --light-green: #9acfa5;
+  --dark-green: rgb(103, 161, 116);
+
+  --black: #333333;
+}
+
 body {
   font-family: "Inter", sans-serif;
-  color: #333333;
+  color: var(--black);
   font-size: 16px;
   margin: 0;
 }
@@ -43,7 +55,7 @@ pre {
 
 a {
   text-decoration: none;
-  color: #333333;
+  color: var(--black);
 }
 
 a:hover {

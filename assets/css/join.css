@@ -1,5 +1,5 @@
 section.join {
-  color: #333333;
+  color: var(--black);
   text-align: center;
   display: flex;
   flex-direction: column;

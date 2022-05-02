@@ -20,7 +20,7 @@ form#collectingemail input.email {
   border: 1px solid #e0e0e0;
   font-size: 14px;
   padding: 0 6px;
-  color: #333333;
+  color: var(--black);
   max-width: 160px;
 }
 
@@ -49,11 +49,11 @@ form#collectingemail.success input.email {
 }
 
 form#collectingemail.error input.email {
-  border: 1px solid #eb5757;
+  border: 1px solid var(--dark-red);
 }
 
 form#collectingemail.success input[type="submit"] {
-  background-color: #27ae60;
+  background-color: var(--dark-green);
   cursor: default;
 }
 
@@ -68,14 +68,15 @@ form#collectingemail .hidden {
 .collectingemail_error {
   display: block;
   font-size: 14px;
-  color: #eb5757;
+  color: var(--dark-red);
   margin-top: -10px;
 }
 
 form#collectingemail .loader-container {
   background-color: steelblue;
-  padding: 0.5px 0;
+  padding: 0 19px;
   border-radius: 5px;
+  height: 37px;
 }
 
 form#collectingemail .loader {

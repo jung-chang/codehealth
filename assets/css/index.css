@@ -1,10 +1,10 @@
 .home {
-  color: #333;
+  color: var(--black);
 }
 
 .home a {
   text-decoration: none;
-  color: #333333;
+  color: var(--black);
 }
 
 .home section {
@@ -63,13 +63,13 @@
 .home .featured .feature-post h1 {
   font-size: 18px;
   font-weight: normal;
-  color: #333333;
+  color: var(--black);
 }
 
 .home .featured .feature-post p {
   font-size: 14px;
   font-weight: normal;
-  color: #333333;
+  color: var(--black);
 }
 
 .home .featured .post-tags {

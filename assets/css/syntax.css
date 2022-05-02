@@ -52,27 +52,27 @@ pre.chroma {
 }
 /* Keyword */
 .chroma .k {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* KeywordConstant */
 .chroma .kc {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* KeywordDeclaration */
 .chroma .kd {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* KeywordNamespace */
 .chroma .kn {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* KeywordPseudo */
 .chroma .kp {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* KeywordReserved */
@@ -240,12 +240,12 @@ pre.chroma {
 }
 /* Operator */
 .chroma .o {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* OperatorWord */
 .chroma .ow {
-  color: #333333;
+  color: var(--black);
   font-weight: bold;
 }
 /* Comment */
@@ -288,12 +288,12 @@ pre.chroma {
 }
 /* GenericDeleted */
 .chroma .gd {
-  color: #333333;
+  color: var(--black);
   background-color: #ffdddd;
 }
 /* GenericEmph */
 .chroma .ge {
-  color: #333333;
+  color: var(--black);
   font-style: italic;
 }
 /* GenericError */
@@ -306,7 +306,7 @@ pre.chroma {
 }
 /* GenericInserted */
 .chroma .gi {
-  color: #333333;
+  color: var(--black);
   background-color: #ddffdd;
 }
 /* GenericOutput */

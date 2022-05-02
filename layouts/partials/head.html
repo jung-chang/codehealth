@@ -7,8 +7,10 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-	<link
-	rel="manifest" href="/site.webmanifest">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+	<meta
+	name="msapplication-TileColor" content="#da532c">
 
 	<!-- Primary Meta Tags -->
 	<title>codehealth.dev</title>
@@ -22,14 +24,14 @@
 	<meta property="og:title" content="codehealth.dev">
 	<meta property="og:description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
 	<meta
-	property="og:image" content="/img/card.png">
+	property="og:image" content="https://codehealth.dev/img/card.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://codehealth.dev/">
 	<meta property="twitter:title" content="codehealth.dev">
 	<meta property="twitter:description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
-	<meta property="twitter:image" content="/img/card.png">
+	<meta property="twitter:image" content="https://codehealth.dev/img/card.png">
 
 
 	{{ $css := resources.Match "**.css" | resources.Concat "main.css" | fingerprint | minify }}

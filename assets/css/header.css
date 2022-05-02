@@ -10,7 +10,7 @@ header {
 
 header a {
   text-decoration: none;
-  color: #333333;
+  color: var(--black);
 }
 
 header a.subscribe {

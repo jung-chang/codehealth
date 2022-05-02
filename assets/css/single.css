@@ -28,7 +28,7 @@
 }
 
 .post-navigate a {
-  color: #333333;
+  color: var(--black);
   text-decoration: none;
   max-width: 45%;
 }

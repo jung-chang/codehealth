@@ -27,7 +27,7 @@
 .latest-posts .latest-post .info h1 {
   font-size: 18px;
   font-weight: normal;
-  color: #333333;
+  color: var(--black);
 }
 
 .latest-posts .latest-post .date {
@@ -48,7 +48,7 @@
   padding: 10px;
   border: 1px solid lightgray;
   border-radius: 10px;
-  color: #333333;
+  color: var(--black);
 }
 
 .latest-posts .read-more:hover {

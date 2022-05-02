@@ -16,7 +16,7 @@
 .post-tags a,
 .post-tags div {
   text-decoration: none;
-  color: #333333;
+  color: var(--black);
 }
 
 li.post-tag.clickable:hover {
