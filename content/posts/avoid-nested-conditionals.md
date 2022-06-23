@@ -3,7 +3,7 @@ title: "Avoid Nested Conditionals"
 summary: "Improve readability code by flattening nested conditionals with guard clauses."
 date: 2022-04-07T20:28:13-04:00
 tags: ["clean code", "javascript"]
-draft: false
+draft: true
 ---
 
 Let’s take a look at this example code block for error checking a response from a network request. Can we easily determine which errors are returned for which conditional?

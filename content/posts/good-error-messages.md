@@ -2,7 +2,7 @@
 title: "Good Error Messages"
 date: 2022-04-28T02:26:59-04:00
 tags: ["debugging"]
-draft: false
+draft: true
 ---
 
 ### Example 1: Calculating Percentage

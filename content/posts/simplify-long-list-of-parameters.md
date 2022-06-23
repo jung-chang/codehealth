@@ -2,7 +2,7 @@
 title: "Simplify Long List of Parameters"
 date: 2022-04-17T01:48:59-04:00
 tags: ["clean code", "typescript"]
-draft: false
+draft: true
 ---
 
 Suppose we have a function that helps draw a rectangle with some characteristics provided as function arguments.
