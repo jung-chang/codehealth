@@ -24,6 +24,18 @@ header a.subscribe:hover {
   transition: all 0.4s ease;
 }
 
+header a.home {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+header a.home img {
+  width: 24px;
+  height: 24px;
+}
+
 header a.home:hover {
   text-decoration: none;
   opacity: 0.7;

@@ -15,6 +15,7 @@
   --bg-green: rgba(154, 207, 165, 3%);
   --light-green: #9acfa5;
   --dark-green: rgb(103, 161, 116);
+  --light-grey: rgba(0, 0, 0, 0.1);
 
   --black: #333333;
 }
@@ -37,6 +38,10 @@ h1 {
   font-size: 32px;
 }
 
+h3 {
+  font-weight: bold;
+}
+
 div#content {
   max-width: 720px;
   min-width: 300px;
@@ -47,10 +52,17 @@ div#content {
 
 code {
   line-height: 1.4;
+  background-color: var(--light-grey);
+  padding: 1px 6px 4px 6px;
+  border-radius: 4px;
 }
 
 pre {
   white-space: pre-wrap;
+}
+
+pre code {
+  background-color: transparent;
 }
 
 a {

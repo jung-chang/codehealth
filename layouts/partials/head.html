@@ -9,30 +9,32 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
-	<meta
-	name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileColor" content="#da532c">
+
+	{{ $homeDescription := "Technical blog posts sharing learnings for writing readable and maintainable code."}}
 
 	<!-- Primary Meta Tags -->
 	<title>codehealth.dev</title>
-	<meta name="title" content="codehealth.dev">
+	<meta name="title" content="{{ if .IsPage }}{{ htmlEscape .Title }}{{ else }}{{ .Site.Title }}{{ end }}"/>
 	<meta
-	name="description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
+	name="description" content="{{ if .IsPage }}{{ htmlEscape .Summary }}{{ else }}{{ $homeDescription }}{{ end }}"/>
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://codehealth.dev/">
-	<meta property="og:title" content="codehealth.dev">
-	<meta property="og:description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
+	<meta property="og:url" content="{{ .Permalink }}"/>
+	<meta property="og:site_name" content="{{ .Site.Title }}"/>
+	<meta property="og:title" content="{{ if .IsPage }}{{ htmlEscape .Title }}{{ else }}{{ .Site.Title }}{{ end }}"/>
+	<meta name="og:description" content="{{ if .IsPage }}{{ htmlEscape .Summary }}{{ else }}{{ $homeDescription }}{{ end }}"/>
 	<meta
 	property="og:image" content="https://codehealth.dev/img/card.png">
 
 	<!-- Twitter -->
+	<meta name="twitter:site" content="Codehealth.dev"/>
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://codehealth.dev/">
-	<meta property="twitter:title" content="codehealth.dev">
-	<meta property="twitter:description" content="Blog for sharing advice and learnings on writing readable and maintainable code for all skill levels.">
+	<meta property="twitter:url" content="{{ .Permalink }}"/>
+	<meta property="twitter:title" content="{{ if .IsPage }}{{ htmlEscape .Title }}{{ else }}{{ .Site.Title }}{{ end }}"/>
+	<meta name="twitter:description" content="{{ if .IsPage }}{{ htmlEscape .Summary }}{{ else }}{{ $homeDescription }}{{ end }}"/>
 	<meta property="twitter:image" content="https://codehealth.dev/img/card.png">
-
 
 	{{ $css := resources.Match "**.css" | resources.Concat "main.css" | fingerprint | minify }}
 	<link rel="stylesheet" href="{{ $css.Permalink }}" defer>
