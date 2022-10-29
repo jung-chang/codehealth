@@ -74,6 +74,7 @@
     setIsLoading(true);
     formData.append("email_address_check", "");
     formData.append("locale", "en");
+    // Sendinblue.come
     const response = await fetch(
       "https://b499a3de.sibforms.com/serve/MUIEABug0gc3DxW9vUKNKyCGu4-aFJcCyZ02eAHjK72qfTXRzo8tZCqlD6wsS2yBWZmgeOFY_Mfx--6EFxWHzSyYt6aNngbGRfvyxBTBjftvDCtwSsqP7ZUYujZLYed6L0tX3EbDZfmKw8AKUn-6QmM_g6Y_BExAGp_42lEbk-sHjwupYk-JsJSp_YaKllrxpYzqAcuwpqIEHY4_?isAjax=1",
       {
