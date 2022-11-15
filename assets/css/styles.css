@@ -50,7 +50,7 @@ div#content {
   min-height: calc(100vh - 100px);
 }
 
-code {
+p code {
   line-height: 1.4;
   background-color: var(--light-grey);
   padding: 1px 6px 4px 6px;

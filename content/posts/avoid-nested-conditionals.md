@@ -1,16 +1,15 @@
 ---
 title: "Avoid Nested Conditionals"
 summary: "Improve readability code by flattening nested conditionals with guard clauses."
-date: 2022-04-07T20:28:13-04:00
+date: 2022-11-14
 tags: ["clean code", "javascript"]
-draft: true
+draft: false
 ---
 
 Let’s take a look at this example code block for error checking a response from a network request. Can we easily determine which errors are returned for which conditional?
 
 {{< red-code >}}
 {{< highlight javascript >}}
-
 const response = await fetch('www.example.com');
 if (response.status === HTTP_200_OK) {
   if (response.getContentType() === 'application/json') {
