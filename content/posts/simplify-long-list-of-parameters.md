@@ -46,7 +46,7 @@ function draw(rectangle: Rectangle, attributes: Attributes) {
 
 By grouping the parameters into easily understandable interfaces, we **improve readability** of the function as well as **simplify future refactors** to accomodate new attributes.
 
-However, this is ultimately a tradeoff as primitive parameters provide powerful versatility in how functions can be defined. Simply, not every parameter needs to be grouped!
+However, this is ultimately a tradeoff as primitive parameters provide powerful versatility in how functions can be defined. Not all parameters need to be simplified this way!
 
 {{% tldr %}}
 

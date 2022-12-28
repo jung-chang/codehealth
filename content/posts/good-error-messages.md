@@ -20,9 +20,9 @@ Traceback (most recent call last):
 
 {{< /red-code >}}
 
-It’s very difficult to figure out what went wrong especially since it’s a generic error type. All we know is that and error occurred when calling the `percentage()` function.
+This error message doesn't provide any information about the error that occurred. The only useful information is from the stack trace pointing to the `percentage()` function.
 
-We can greatly improve this error message by **providing enough information to diagnose** the issue through specific error types and messages along with **suggestions for next steps**.
+We can improve this by **providing enough information to diagnose** the issue through specific error types along with **debugging suggestions**.
 
 {{< green-code >}}
 
@@ -35,13 +35,13 @@ Traceback (most recent call last):
 
 {{< /green-code >}}
 
-This error message is much better to help with determining the root cause of the error and what to do to resolve it. It also uses **consistent language** when referring to the function parameters to avoid confusion.
+This error message helps determine the root cause of the error and provides possible steps to resolve it. It also uses **consistent language** when referring to the function parameters for clarity to avoid confusion.
 
 <br/>
 
 ### Example 2: Parsing Files
 
-Our next example, the starting error message is pretty good as it contains information on the type of error that occurs. We know that the file contents may be malformed and our `parse()` function is unable to interpret it for parsing.
+This error message is decent and contains information on the type of error that occurs. We know that the file contents may be malformed and our `parse()` function is unable to successfully interpret the contents.
 
 {{< red-code >}}
 
@@ -54,9 +54,9 @@ Traceback (most recent call last):
 
 {{< /red-code >}}
 
-However, what can we do with this information? This error message is only useful in identifying the error type but is not helpful in determining the root case and finding a solution.
+However, what can we do with this information? This error message is only useful for identifying the error type but is not helpful in determining the root case and finding a solution.
 
-To improve this, we include **code pointers** to where the parsing failedand a link to detailed logs as an **additional resource** for more insight into the parsing process. Finally, the error can include **information about limitations** that are present in the system that is useful to be aware of.
+To improve this, we can include **code pointers** to indicate where it failed and a link to detailed logs as **additional resources** for further insight into the parsing process. Finally, the error can include **information about limitations** that are present in the system and are important to be aware of.
 
 {{< green-code >}}
 
@@ -69,14 +69,14 @@ Traceback (most recent call last):
 
 {{< /green-code >}}
 
-Overall, error messages are meant to aid understanding of the problem and help arrive at a solution. They should be **clear and concise** as well as **simple yet comprehensive**.
+Overall, error messages are meant to aid understanding of the problem and help arrive at a solution. They should be **clear and concise** and **simple yet comprehensive**.
 
 {{% tldr %}}
 
 Considerations when writing good error messages:
 
-1. Use clear and concise error messages to provide enough information to help diagnose the error.
-2. Include helpful pointers and suggestions that provide more context to the problem space.
+1. Use clear and concise error messages to present information to help diagnose the error.
+2. Include helpful pointers and suggestions that provide context to the problem space.
 3. Prioritize clarity and keep language consistent to avoid confusion.
 
 {{% /tldr %}}
@@ -85,7 +85,7 @@ Considerations when writing good error messages:
 
 ## 📚 Additional Resources
 
-Here are some additional resources to help understand how error messages and debugging go together:
+Here are some additional resources to help understand how error messages and debugging work together:
 
-- MDN Web Docs: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank">Builtin Error Object</a>
-- Khan Academy: <a href="https://www.khanacademy.org/computing/computer-programming/programming/debugging-programs/a/more-debugging-tips" target="_blank">More Debugging Tips</a>
+- Association for Computing Machinery: <a href="https://dl.acm.org/doi/fullHtml/10.1145/3411764.3445696" target="_blank">On Designing Programming Error Messages for Novices: Readability and its Constituent Factors</a>
+- Khan Academy: <a href="https://www.khanacademy.org/computing/computer-programming/programming#debugging-programs" target="_blank">Debugging Programs Course</a>
