@@ -1,8 +1,8 @@
 ---
 title: "Good Error Messages"
-date: 2022-04-28T02:26:59-04:00
+date: 2023-01-12
 tags: ["debugging"]
-draft: true
+draft: false
 ---
 
 ### Example 1: Calculating Percentage

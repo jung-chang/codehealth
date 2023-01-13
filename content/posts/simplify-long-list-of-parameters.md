@@ -46,7 +46,7 @@ function draw(rectangle: Rectangle, attributes: Attributes) {
 
 By grouping the parameters into easily understandable interfaces, we **improve readability** of the function as well as **simplify future refactors** to accomodate new attributes.
 
-However, this is ultimately a tradeoff as primitive parameters provide powerful versatility in how functions can be defined. Not all parameters need to be simplified this way!
+This is ultimately a tradeoff as primitive parameters provide powerful versatility in how functions can be defined, thus not all parameters need to be simplified this way.
 
 {{% tldr %}}
 
@@ -65,4 +65,4 @@ General rules to follow to simplify a long list of parameters:
 Here are some additional resources to understand more about function parameters:
 
 - MDN Web Docs: <a href="https://developer.mozilla.org/en-US/docs/Glossary/Parameter" target="_blank">Parameters</a>
-- Wikipedia: <a href="https://en.wikipedia.org/wiki/Single-responsibility_principle" target="_blank">Single Responsibility Principle</a> (when to split up functions)
+- Wikipedia: <a href="https://en.wikipedia.org/wiki/Single-responsibility_principle" target="_blank">Single Responsibility Principle</a> (when to split up functinos and parameters)

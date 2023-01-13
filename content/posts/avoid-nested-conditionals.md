@@ -29,9 +29,9 @@ if (response.status === HTTP_200_OK) {
 {{< /highlight >}}
 {{< /red-code >}}
 
-It’s not obvious which errors are a result of which if statement due to the complexities introduced by nested conditionals.
+It’s not obvious which errors are a result of which if statement due to the complexities introduced by **nested conditionals**.
 
-How can we improve this? We can flatten the nested conditionals by decoupling the if statements like the following:
+How can we improve this? We can flatten the nested conditionals by decoupling the `if` statements like the following:
 
 {{< green-code >}}
 {{< highlight javascript >}}
