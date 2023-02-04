@@ -42,3 +42,7 @@ li.post-tag[data-tag="documentation"] {
 li.post-tag[data-tag="debugging"] {
   background-color: #f9dae8;
 }
+
+li.post-tag[data-tag="testing"] {
+  background-color: #e8f9da;
+}

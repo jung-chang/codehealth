@@ -1,5 +1,6 @@
 ---
 title: "Good Error Messages"
+summary: "Write good error messages by using consistent language and providing enough information to debug the issue."
 date: 2023-01-12
 tags: ["debugging"]
 draft: false

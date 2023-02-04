@@ -1,5 +1,6 @@
 ---
 title: "Simplify Long List of Parameters"
+summary: "If there are too many function parameters, look to simplify them by grouping them appropriately."
 date: 2022-12-22
 tags: ["clean code", "typescript"]
 draft: false
