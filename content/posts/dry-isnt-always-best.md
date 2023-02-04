@@ -1,9 +1,9 @@
 ---
 title: "DRY Isn't Always Best"
 summary: "It is generally best to avoid strict DRY for test code in favor of clarity and maintainability."
-date: 2022-02-03
+date: 2022-02-04
 tags: ["testing", "typescript"]
-draft: true
+draft: false
 ---
 
 The **DRY (Don't Repeat Yourself)**<sup><a href="#fn1">[1]</a></sup> principle is a widely accepted software development principle that encourages avoiding duplication of code. While it is a good principle to follow for production code, it may not be ideal for test code!
