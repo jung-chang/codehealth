@@ -1,7 +1,7 @@
 ---
 title: "DRY Isn't Always Best"
 summary: "It is generally best to avoid strict DRY for test code in favor of clarity and maintainability."
-date: 2022-02-04
+date: 2023-02-04
 tags: ["testing", "typescript"]
 draft: false
 ---
