@@ -1,0 +1,62 @@
+<dialog id="subscribe-dialog">
+	<button id="subscribe-dialog-close"></button>
+	{{ partial "join.html" . }}
+</dialog>
+
+<script>
+	const dialog = document.getElementById("subscribe-dialog")
+    const closeButton = document.getElementById("subscribe-dialog-close")
+    const storage = window.localStorage
+    const pathname = window.location.pathname
+
+    document.addEventListener("DOMContentLoaded", () => {
+        window.collectingEmail("subscribe-dialog")
+    })
+
+    // TODO: Set expiration time for local storage blocks.
+    document.addEventListener("scroll", (event) => {
+        const scrollingElement = event.target.scrollingElement;
+        const {scrollHeight, scrollTop, clientHeight} = scrollingElement;
+        if (Math.abs(scrollHeight - clientHeight - scrollTop) < 1) {
+            if (! dialog.open && ! storage.getItem(pathname)) {
+                dialog.showModal()
+                storage.setItem(pathname, true)
+            }
+        }
+    });
+
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+    });
+</script>
+
+<style>
+	dialog#subscribe-dialog {
+		border-radius: 5px;
+		border: 1px solid lightgray;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+		padding: 40px;
+	}
+
+	button#subscribe-dialog-close {
+		position: absolute;
+		top: 10px;
+		right: 16px;
+
+		background: none;
+		color: inherit;
+		border: none;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+	}
+
+	button#subscribe-dialog-close:hover {
+		opacity: 0.5
+	}
+
+	button#subscribe-dialog-close:after {
+		display: inline-block;
+		content: "\00d7";
+	}
+</style>

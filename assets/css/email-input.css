@@ -4,6 +4,7 @@ form#collectingemail {
   max-width: 270px;
   gap: 5px;
   margin: auto;
+  justify-content: center;
 }
 
 form#collectingemail * {
@@ -69,7 +70,7 @@ form#collectingemail .hidden {
   display: block;
   font-size: 14px;
   color: var(--dark-red);
-  margin-top: -10px;
+  margin-top: 5px;
 }
 
 form#collectingemail .loader-container {
