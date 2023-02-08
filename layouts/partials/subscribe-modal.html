@@ -17,8 +17,8 @@
     document.addEventListener("scroll", (event) => {
         const scrollingElement = event.target.scrollingElement;
         const {scrollHeight, scrollTop, clientHeight} = scrollingElement;
-        if (Math.abs(scrollHeight - clientHeight - scrollTop) < 1) {
-            if (! dialog.open && ! storage.getItem(pathname)) {
+        if (Math.abs(scrollHeight - clientHeight - scrollTop) < 150) {
+            if (!dialog.open && !storage.getItem(pathname)) {
                 dialog.showModal()
                 storage.setItem(pathname, true)
             }
