@@ -25,7 +25,7 @@ test('bank account works correct', () => {
 {{< /highlight >}}
 {{< /red-code >}}
 
-While this code works and provides test coverage, it **fails to give a clear pictur about what it's testing for**. The test has overly complex logic and favors cleverness over clarity with multiple seemingly unrelated assertions.
+While this code works and provides test coverage, it **fails to give a clear picture about what it's testing for**. The test has overly complex logic and favors cleverness over clarity with multiple seemingly unrelated assertions.
 
 Let's refactor the unit test
 
