@@ -12,7 +12,7 @@ For example, when does this conditional pass?
 {{< red-code >}}
 {{< highlight javascript >}}
 if (!user.notAuthorized || !user.isNotAdmin()) {
-setPermissions();
+    setPermissions();
 }
 {{< /highlight >}}
 {{< /red-code >}}
@@ -22,7 +22,7 @@ It’s not easily understandable because the **double negatives are confusing**.
 {{< green-code >}}
 {{< highlight javascript >}}
 if (authorized || isAdmin()) {
-setPermissions();
+    setPermissions();
 }
 {{< /highlight >}}
 {{< /green-code >}}
