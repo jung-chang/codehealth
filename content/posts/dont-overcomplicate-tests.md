@@ -1,18 +1,18 @@
 ---
-title: "DRY Isn't Always Best"
-summary: "It is generally best to avoid strict DRY for test code in favor of clarity and maintainability."
+title: "Don't Overcomplicate Tests"
+summary: "Don't add unnecessary complexity in test code and prefer clarity to help readers understand what it's testing for."
 date: 2023-02-04
 tags: ["testing", "typescript"]
 draft: false
 ---
 
-The **DRY (Don't Repeat Yourself)**<sup><a href="#fn1">[1]</a></sup> principle is a widely accepted software development principle that encourages avoiding duplication of code. While it is a good principle to follow for production code, it may not be ideal for test code!
+In code, we have a lot of tools in our disposal to write logic such as for loops and conditionals. While it's a good practice to utilize these tools to simplify logic and control flow, it may not always be the case for test code.
 
 Let's take a look at this example unit test; can you figure out what it's testing?
 
 {{< red-code >}}
 {{< highlight javascript >}}
-test('bank account works correct', () => {
+test('bank account works correctly', () => {
     const account = new Account({owner: 'alice', balance: 100})
     for (let i = 1; i <= 2; i++) {
         account.withdraw(50, 'alice')

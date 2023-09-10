@@ -1,28 +1,28 @@
 ---
 title: "Prefer Positive Booleans"
-date: 2022-04-12T23:41:20-04:00
+date: 2023-09-09T23:41:20-04:00
 tags: ["clean code", "typescript"]
-draft: true
+draft: false
 ---
 
-When reading code, it is oftentimes difficult to understand how conditionals resolve. For example:
+It is oftentimes difficult to understand how a conditional will resolve if the boolean logic is complex. The mental gymnastics needed to figure out all the edge cases soak up developer time and creates room for error.
+
+For example, when does this conditional pass?
 
 {{< red-code >}}
 {{< highlight javascript >}}
 if (!user.notAuthorized || !user.isNotAdmin()) {
-  setPermissions();
+setPermissions();
 }
 {{< /highlight >}}
 {{< /red-code >}}
 
-When does the conditional pass?
-
-It’s not easily understandable because the **double negatives are confusing**. One way to simplify this logic is to use **positive booleans** like such:
+It’s not easily understandable because the **double negatives are confusing**. One way to greatly simplify this logic is to use **positive booleans** like such:
 
 {{< green-code >}}
 {{< highlight javascript >}}
 if (authorized || isAdmin()) {
-// give access
+setPermissions();
 }
 {{< /highlight >}}
 {{< /green-code >}}
@@ -34,9 +34,9 @@ This provides a much clearer understanding about what the conditional is trying 
 - `Complete` vs `Incomplete`
 - `hasValues` vs `Empty`
 
-Finally, it's a good convention to name and set booleans in a way that defaults them to `false`. Developers will gain insight and understand that this conditional only runs when the variables are not in their default states (which is a great mental model for logic flow in general).
+Finally, it's a good convention to name and set booleans in a way that defaults them to `false`. Developers will gain insight and understand that this conditional only runs when the variables are not in their default states, which is a great mental model for logic flow in general.
 
-Conventional naming and structure for your booleans are effective and impactful ways to improve code readability and **avoid logical errors**. 
+Conventional naming and structure for your booleans are effective and impactful ways to improve code readability and **avoid logical errors**.
 
 {{% tldr %}}
 
@@ -44,7 +44,7 @@ General rules when using booleans:
 
 1. Use positive booleans to avoid confusion from double negatives
 2. Implicitly default boolean logic to false
-3. use consistent and appropriate language when defining booleans
+3. Use consistent and appropriate language when defining booleans
 
 {{% /tldr %}}
 
