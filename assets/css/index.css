@@ -97,3 +97,26 @@ dialog.subscribe {
 dialog.subscribe[open] {
   display: block;
 }
+
+.home div#email-input-container span#caption{
+  margin-left: 0;
+}
+
+div#email-input-container span#caption {
+  display: flex;
+  padding-top: 10px;
+  color: grey;
+  font-size: 11px;
+  margin-left: 40px;
+}
+
+div#email-input-container span#caption a {
+  color: grey;
+  font-size: 11px;
+  text-decoration-style: dotted !important;
+  text-decoration: underline;
+}
+
+div#email-input-container span#caption a:hover {
+  color: black;
+}
