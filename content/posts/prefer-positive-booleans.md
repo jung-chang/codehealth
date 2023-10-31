@@ -1,5 +1,6 @@
 ---
 title: "Prefer Positive Booleans"
+summary: "Prefer using positive booleans as variables to avoid confusion and promote clarity in code."
 date: 2023-09-09T23:41:20-04:00
 tags: ["clean code", "typescript"]
 draft: false
