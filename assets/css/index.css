@@ -80,8 +80,8 @@
   font-size: 12px;
 }
 
-.home form#collectingemail,
-.home .collectingemail_error {
+.home form#bitforms,
+.home .bitforms_error {
   margin: 0;
   margin-top: 10px;
 }
