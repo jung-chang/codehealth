@@ -1,32 +1,33 @@
 {{ define "main" }}
 <article class="post">
-  <section class="post-heading">
-    <h1>{{ .Title }}</h1>
-    <div class="post-date">{{ .PublishDate.Format "January 2, 2006" }}</div>
-    {{ .Scratch.Set "clickable" false }} {{ partial "post-tags.html" .}}
-  </section>
-  <secion class="post-content"> {{ .Content }} </secion>
-  <section class="subscribe"><hr/>{{partial "join.html" .}}</section>
-  <section class="post-navigate">
-    {{with .Prev}}
-    <a class="prev" href="{{.Permalink}}">
-      <div class="arrow"><</div>
-      <div class="info">
-        <div class="title">{{.Title}}</div>
-        <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
-      </div>
-    </a>
-    {{end}} {{with .Next}}
-    <a class="next" href="{{.Permalink}}">
-      <div class="info">
-        <div class="title">{{.Title}}</div>
-        <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
-      </div>
-      <div class="arrow">></div>
-    </a>
-    {{end}}
-  </section>
-  {{partial "subscribe-modal.html" .}}
+    <section class="post-heading">
+        <h1>{{ .Title }}</h1>
+        <div class="post-date">{{ .PublishDate.Format "January 2, 2006" }}</div>
+        {{ .Scratch.Set "clickable" false }} {{ partial "post-tags.html" .}}
+    </section>
+    <secion class="post-content"> {{ .Content }} </secion>
+    <section class="subscribe">
+        <hr />
+        {{partial "join.html" .}}
+    </section>
+    <section class="post-navigate">
+        {{with .Prev}}
+        <a class="prev" href="{{.Permalink}}">
+            <div class="arrow"><</div>
+            <div class="info">
+                <div class="title">{{.Title}}</div>
+                <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
+            </div>
+        </a>
+        {{end}} {{with .Next}}
+        <a class="next" href="{{.Permalink}}">
+            <div class="info">
+                <div class="title">{{.Title}}</div>
+                <div class="date">{{ .PublishDate.Format "Jan 2, 2006" }}</div>
+            </div>
+            <div class="arrow">></div>
+        </a>
+        {{end}}
+    </section>
 </article>
-
 {{ end }}

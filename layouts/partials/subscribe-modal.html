@@ -1,63 +1,77 @@
 <dialog id="subscribe-dialog">
-  <button id="subscribe-dialog-close"></button>
-  {{ partial "join.html" . }}
+    <button id="subscribe-dialog-close"></button>
+    <h2>💌 Thank you for subscribing</h2>
+    <div class="dialog-text">
+        Please check your inbox for a confirmation email.
+    </div>
 </dialog>
 
 <script>
-  const dialog = document.getElementById("subscribe-dialog");
-  const closeButton = document.getElementById("subscribe-dialog-close");
-  const storage = window.localStorage;
-  const pathname = window.location.pathname;
+    const dialog = document.getElementById("subscribe-dialog");
+    const closeButton = document.getElementById("subscribe-dialog-close");
+    const storage = window.localStorage;
+    const pathname = window.location.pathname;
 
-  document.addEventListener("DOMContentLoaded", () => {
-    window.start(dialog);
-  });
+    document.addEventListener("DOMContentLoaded", () => {
+        window.start(dialog);
+        const urlParams = new URLSearchParams(window.location.search);
+        const subscribed = urlParams.get("subscribed");
 
-  // TODO: Set expiration time for local storage blocks.
-  document.addEventListener("scroll", (event) => {
-    const scrollingElement = event.target.scrollingElement;
-    const { scrollHeight, scrollTop, clientHeight } = scrollingElement;
-    if (Math.abs(scrollHeight - clientHeight - scrollTop) < 150) {
-      if (!dialog.open && !storage.getItem(pathname)) {
-        dialog.showModal();
-        storage.setItem(pathname, true);
-      }
-    }
-  });
+        if (subscribed === "true" && dialog) {
+            dialog.showModal();
+        }
+    });
 
-  closeButton.addEventListener("click", () => {
-    dialog.close();
-  });
+    // TODO: Set expiration time for local storage blocks.
+    document.addEventListener("scroll", (event) => {
+        const scrollingElement = event.target.scrollingElement;
+        const { scrollHeight, scrollTop, clientHeight } = scrollingElement;
+        if (Math.abs(scrollHeight - clientHeight - scrollTop) < 150) {
+            if (!dialog.open && !storage.getItem(pathname)) {
+                // dialog.showModal();
+                storage.setItem(pathname, true);
+            }
+        }
+    });
+
+    closeButton.addEventListener("click", () => {
+        dialog.close();
+    });
 </script>
 
 <style>
-  dialog#subscribe-dialog {
-    border-radius: 5px;
-    border: 1px solid lightgray;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-      0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-  }
+    dialog#subscribe-dialog {
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px -1px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+    }
 
-  button#subscribe-dialog-close {
-    position: absolute;
-    top: 10px;
-    right: 16px;
+    button#subscribe-dialog-close {
+        position: absolute;
+        top: 10px;
+        right: 16px;
 
-    background: none;
-    color: inherit;
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-  }
+        background: none;
+        color: inherit;
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
 
-  button#subscribe-dialog-close:hover {
-    opacity: 0.5;
-  }
+    button#subscribe-dialog-close:hover {
+        opacity: 0.5;
+    }
 
-  button#subscribe-dialog-close:after {
-    display: inline-block;
-    content: "\00d7";
-  }
+    button#subscribe-dialog-close:after {
+        display: inline-block;
+        content: "\00d7";
+    }
+
+    dialog#subscribe-dialog .dialog-text {
+        padding-top: 20px;
+    }
 </style>
